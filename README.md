@@ -27,19 +27,8 @@ Contributors should follow the standard team development practices:
 
 ##Coding Style
 
-- Use 4 spaces (soft tab) for indentation;
+[Click here for wiki page](https://github.com/xenonsin/RPGDatabaseManger/wiki/Coding-Style-Guide)
 
-- Private variables begin with lowercase and is in camelCase;
-
-- Public properties start with uppercase and is in CamelCase;
-
-- Functions start with uppercase and is in CamelCase;
-
-- Functions should encompass a single task. Separate large blocks of code to make it more readable.
-
-- Variable/function names should be descriptive (i.e. NOT  x,y,z  YES windowWidth, windowHeight)
-
-- Comments are to be only used when the variable/function names don’t adequately describe what’s going on. Describe *WHY* not what or how.
 
 ##Relevant Info
 [Database GUI Inspiration](https://steamcommunity.com/sharedfiles/filedetails/?id=123520832) - Visit this to see the module GUI examples. 
