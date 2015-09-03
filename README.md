@@ -19,7 +19,7 @@ Contributors should follow the standard team development practices:
 
 1. Start working on a task
 
-2. Branch out of master using a descriptive name (i.e. DialogueBranch)
+2. Branch out of develop using a descriptive name (i.e. DialogueBranch)
 
 3. Commit frequently with clear messages
 
