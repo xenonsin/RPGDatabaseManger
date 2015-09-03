@@ -39,7 +39,7 @@ Contributors should follow the standard team development practices:
 
 - Variable/function names should be descriptive (i.e. NOT  x,y,z  YES windowWidth, windowHeight)
 
-- Comments are to be only used when the variable/function names don’t adequately describe what’s going on. Describe why not what or how.
+- Comments are to be only used when the variable/function names don’t adequately describe what’s going on. Describe *WHY* not what or how.
 
 ##Relevant Info
 [Database GUI Inspiration](https://steamcommunity.com/sharedfiles/filedetails/?id=123520832) - Visit this to see the module GUI examples. 
