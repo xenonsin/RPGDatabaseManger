@@ -1,0 +1,61 @@
+﻿<Page x:Class="RPGDatabaseManager.View.CharacterView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RPGDatabaseManager"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="CharacterView">
+
+    <Grid>
+        <!--3 columns for CHARACTER, GENERAL SETTING, FEATURES-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <!--Character Column-->
+            <StackPanel Grid.Column="0">
+                <Border Style="{StaticResource borderStyle}">                    
+                    <TextBlock Text="Character +" Style="{StaticResource borderTextStyle}"/>
+                </Border>
+                <!--Character names-->
+                <ListView Style="{StaticResource listViewStyle}">
+                    <ListViewItem Content="Keno"/>
+                    <ListViewItem Content="Kiko"/>
+                    <ListViewItem Content="Keo"/>
+                </ListView>
+            </StackPanel>
+            <!--General settigns Column-->
+            <Grid Grid.Column="1">
+                <!--3 rows for GENERAL SETTING, PHOTOS, STARTING EQUIPMENT-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--General Properties-->
+                <StackPanel Grid.Row="0" Style="{StaticResource stackPanelstyle}">
+                    <Label Content="Name:" Style="{StaticResource labelStyle}"/>
+                    <TextBox Text="Keno" Style="{StaticResource textBoxStyle}"/>
+                    <Label Content="Class:" Style="{StaticResource labelStyle}"/>
+                    <TextBox Text="Archer" Style="{StaticResource textBoxStyle}"/>
+                    <Label Content="Inital Level:" Style="{StaticResource labelStyle}"/>
+                    <TextBox Text="1" Style="{StaticResource textBoxStyle}"/>
+                    <Label Content="Max Level:" Style="{StaticResource labelStyle}"/>
+                    <TextBox Text="100" Style="{StaticResource textBoxStyle}"/>
+                    <Label Content="Description:" Style="{StaticResource labelStyle}"/>
+                    <TextBox Text="United We Stand" Style="{StaticResource textBoxStyle}"/>
+                </StackPanel>
+                <!--Photos-->
+                <ListBox Grid.Row="1">
+                    <ListBoxItem>
+                        <Rectangle Fill="Green" Width="30" Height="30"/>
+                    </ListBoxItem>
+                </ListBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

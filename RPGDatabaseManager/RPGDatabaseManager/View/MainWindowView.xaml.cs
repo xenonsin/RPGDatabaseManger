@@ -12,17 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RPGDatabaseManager.ViewModel;
 
-namespace RPGDatabaseManager
+namespace RPGDatabaseManager.View
 {
     /// <summary>
-    /// Interaction logic for CharacterView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class CharacterView : Page
+    public partial class MainWindowView : Window
     {
-        public CharacterView()
+        public MainWindowViewModel ViewModel { get; set; }
+
+        public MainWindowView()
         {
             InitializeComponent();
+            CharacterView Char = new CharacterView();
+            character.Navigate(Char);
         }
+
+     
     }
 }

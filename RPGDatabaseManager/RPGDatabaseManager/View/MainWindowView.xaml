@@ -1,0 +1,19 @@
+﻿<Window x:Class="RPGDatabaseManager.View.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="800" Width="1200">
+    
+    <Grid>
+        <TabControl TabStripPlacement="Top" BorderThickness="0" BorderBrush="White" UseLayoutRounding="False" Background="Transparent">
+            <TabItem Header="Character" Style="{StaticResource tabItemStyle}" BorderBrush="White" BorderThickness="0">
+                <Frame x:Name="character"/>
+            </TabItem>
+            <TabItem Header="Items" Style="{StaticResource tabItemStyle}">
+                <Frame x:Name="items"/>
+            </TabItem>
+            <TabItem Header="Dialog" Style="{StaticResource tabItemStyle}">
+                <Frame x:Name="dialog"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
