@@ -4,7 +4,7 @@
              StartupUri="View/MainWindowView.xaml">
     <Application.Resources>
          <!--Tab item style-->
-        <Style x:Key="tabItemStyle" TargetType="TabItem">
+        <Style x:Key="tabItemStyle" TargetType="TabControl">
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="BorderBrush" Value="White"/>
             <Setter Property="FontSize" Value="12"/>
@@ -38,7 +38,8 @@
         <!--Label style-->
         <Style x:Key="labelStyle" TargetType="Label">
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Foreground" Value="White"/>            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>   
+            <Setter Property="BorderThickness" Value="0"/>
 
         </Style>
 

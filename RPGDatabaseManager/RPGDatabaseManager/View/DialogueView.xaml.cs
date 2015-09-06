@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using RPGDatabaseManager.ViewModel;
 
 namespace RPGDatabaseManager.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DialogueView.xaml
     /// </summary>
-    public partial class MainWindowView : Window
+    public partial class DialogueView : Page
     {
-        public MainWindowViewModel ViewModel { get; set; }
-
-        public MainWindowView()
+        public DialogueView()
         {
             InitializeComponent();
-            ViewModel = new MainWindowViewModel();
-            this.DataContext = ViewModel;
         }
-
-     
     }
 }

@@ -4,16 +4,17 @@
         Title="MainWindow" Height="800" Width="1200">
     
     <Grid>
-        <TabControl TabStripPlacement="Top" BorderThickness="0" BorderBrush="White" UseLayoutRounding="False" Background="Transparent">
-            <TabItem Header="Character" Style="{StaticResource tabItemStyle}" BorderBrush="White" BorderThickness="0">
-                <Frame x:Name="character"/>
-            </TabItem>
-            <TabItem Header="Items" Style="{StaticResource tabItemStyle}">
-                <Frame x:Name="items"/>
-            </TabItem>
-            <TabItem Header="Dialog" Style="{StaticResource tabItemStyle}">
-                <Frame x:Name="dialog"/>
-            </TabItem>
+        <TabControl TabStripPlacement="Top"  ItemsSource="{Binding Settings}" Background="#FF2D2D30" SelectedIndex="{Binding SelectedTab}">            
+            <TabControl.ItemTemplate>
+                <DataTemplate>                    
+                    <TextBlock Text="{Binding Header}" Margin="20" Foreground="Gray"/>                   
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <Frame Content="{Binding Path=ViewPage , Mode=TwoWay}"/>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
         </TabControl>
     </Grid>
 </Window>
