@@ -30,5 +30,10 @@ namespace RPGDatabaseManager.View
         {
 
         }
+
+        private void textBox4_Copy1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
