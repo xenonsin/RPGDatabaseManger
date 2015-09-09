@@ -12,7 +12,7 @@
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>
                 <DataTemplate>
-                    <Frame Content="{Binding Path=ViewPage , Mode=TwoWay}"/>
+                    <Frame Content="{Binding Path=ViewPage , Mode=TwoWay}" NavigationUIVisibility="Hidden"/>
                 </DataTemplate>
             </TabControl.ContentTemplate>
         </TabControl>
