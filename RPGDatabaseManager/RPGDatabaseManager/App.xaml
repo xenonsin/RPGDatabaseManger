@@ -1,59 +1,8 @@
 ﻿<Application x:Class="RPGDatabaseManager.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="View/MainWindowView.xaml">
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <!--Tab item style-->
-        <Style x:Key="tabItemStyle" TargetType="TabControl">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="BorderBrush" Value="White"/>
-            <Setter Property="FontSize" Value="12"/>
-        </Style>
-        <!--Border style-->
-        <Style x:Key="borderStyle" TargetType="Border">
-            <Setter Property="Background" Value="#FF0086DC"/>
-            <Setter Property="Margin" Value="0 0 0 0.1"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
-            <Setter Property="TextBlock.Foreground" Value="White"/>
-            <Setter Property="TextBlock.FontSize" Value="30" />
-        </Style>
-        <!--BorderText style-->
-        <Style x:Key="borderTextStyle" TargetType="TextBlock">     
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="30" />
-        </Style>
-        
-        <!--listView style-->
-        <Style x:Key="listViewStyle" TargetType="ListView">
-            <Setter Property="FontSize" Value="25"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#FF44A6DE"/>
-        </Style>
-        
-        <!--Label style-->
-        <Style x:Key="labelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Foreground" Value="White"/>   
-            <Setter Property="BorderThickness" Value="0"/>
-
-        </Style>
-
-        <!--textBoxStyle style-->
-        <Style x:Key="textBoxStyle" TargetType="TextBox">
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Background" Value="#FF44A6DE"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
-        </Style>
-        
-        <!--stackPanel style-->
-        <Style x:Key="stackPanelstyle" TargetType="StackPanel">
-            <Setter Property="Background" Value="#FF0086DC"/>          
-        </Style>
+         
     </Application.Resources>
 </Application>

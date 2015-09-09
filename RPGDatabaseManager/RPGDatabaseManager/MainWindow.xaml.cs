@@ -13,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RPGDatabaseManager.View
+namespace RPGDatabaseManager
 {
     /// <summary>
-    /// Interaction logic for CharacterView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class CharacterView : Page
+    public partial class MainWindow : Window
     {
-
-        public CharacterView()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
