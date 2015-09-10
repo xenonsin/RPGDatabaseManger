@@ -18,7 +18,7 @@ namespace RPGDatabaseManager.View
     /// <summary>
     /// Interaction logic for CharacterView.xaml
     /// </summary>
-    public partial class CharacterView : Page
+    public partial class CharacterView : UserControl
     {
 
         public CharacterView()
