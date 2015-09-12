@@ -148,7 +148,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\a.jpg" />
+    <Resource Include="Assets\b.jpg" />
+    <Resource Include="Assets\c.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

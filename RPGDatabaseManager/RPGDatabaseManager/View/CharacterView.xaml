@@ -21,7 +21,7 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MaterialDesignRaisedButton}">
-            <Setter Property="Margin" Value="2 0 1 0"/>
+            <Setter Property="Margin" Value="2 1 1 1"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <Style x:Key="AttributeGridMarginStyle" TargetType="Grid">
@@ -47,9 +47,9 @@
             <!--Four rows inside the first main colummn-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="8.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <!--Character Name list-->
             <ListBox Grid.Row="0">
@@ -81,7 +81,8 @@
             </Grid.RowDefinitions>
             <!--Properties-->
             <GroupBox Grid.Row="0" Header="Properties">
-                <Grid>
+                <ScrollViewer>                    
+                    <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -118,6 +119,7 @@
                     <TextBox Grid.Row="0" Grid.Column="1" wpf:TextFieldAssist.Hint="Age"/>
                     <TextBox Grid.Row="3" Grid.Column="1" wpf:TextFieldAssist.Hint="Weight"/>
                 </Grid>
+                </ScrollViewer>
             </GroupBox>
             <!--Starting Attributes-->
             <GroupBox Grid.Row="1" Header="Starting Attributes">
@@ -207,7 +209,8 @@
             </GroupBox>
             <!--Physical and Magical Stats-->
             <GroupBox Grid.Row="2" Header="Physical and Magical Stats">
-                <Grid>
+                <ScrollViewer>                    
+                    <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -251,7 +254,7 @@
                         <TextBlock Text="26-19" FontSize="20"/>
                     </StackPanel>
                 </Grid>
-                
+                </ScrollViewer>
             </GroupBox>
         </Grid>
         <!--Third Main Column[Description and Visuals]-->
@@ -274,22 +277,25 @@ Cras tellus justo, consequat sit amet quam eu, dapibus eleifend tellus. Suspendi
                 </RichTextBox>
             </GroupBox>
             <!--Visuals-->
+            
             <GroupBox Header="Visuals" Grid.Row="1">
-                <ListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <UniformGrid Rows="2" Columns="2"/>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                    <!--My design idea here is to show a prompt-->
-                    <!--when the user right click that give 
+                <ScrollViewer>
+                    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Rows="2" Columns="2"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <!--My design idea here is to show a prompt-->
+                        <!--when the user right click that give 
                     option to add or delete image-->
-                    <!--just place an image inside asset folder and reference it here-->
-                    <Image Width="100" Source="/RPGDatabaseManager;component/Assets/arthur.jpg"/>
-                    <Image Width="100" Source="/RPGDatabaseManager;component/Assets/arthur.jpg"/>
-                    <Image Width="168" Source="/RPGDatabaseManager;component/Assets/b.jpg"/>
-                    <Image Width="150" Source="/RPGDatabaseManager;component/Assets/c.png"/>
-                </ListBox>
+                        <!--just place an image inside asset folder and reference it here-->
+                        <Image Width="100" Source="/RPGDatabaseManager;component/Assets/a.jpg"/>
+                        <Image Width="100" Source="/RPGDatabaseManager;component/Assets/a.jpg"/>
+                        <Image Width="168" Source="/RPGDatabaseManager;component/Assets/b.jpg"/>
+                        <Image Width="150" Source="/RPGDatabaseManager;component/Assets/c.png"/>
+                    </ListBox>
+                </ScrollViewer>
             </GroupBox>
         </Grid>
     </Grid>
