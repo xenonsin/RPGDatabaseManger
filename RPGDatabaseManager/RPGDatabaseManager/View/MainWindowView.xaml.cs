@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using RPGDatabaseManager.ViewModel;
+using MahApps.Metro.Controls;
 
 namespace RPGDatabaseManager.View
 {
@@ -22,13 +23,11 @@ namespace RPGDatabaseManager.View
     /// </summary>
     public partial class MainWindowView : MetroWindow
     {
-        public MainWindowViewModel ViewModel { get; set; }
 
         public MainWindowView()
         {
             InitializeComponent();
-            ViewModel = new MainWindowViewModel();
-            this.DataContext = ViewModel;
+          
         }
 
      

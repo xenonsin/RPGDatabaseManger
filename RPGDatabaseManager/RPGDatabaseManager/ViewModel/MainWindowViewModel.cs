@@ -13,13 +13,9 @@ namespace RPGDatabaseManager.ViewModel
 {
     public class MainWindowViewModel
     {
-
         public MainWindowViewModel()
         {
      
         }
-
-
-
     }
 }

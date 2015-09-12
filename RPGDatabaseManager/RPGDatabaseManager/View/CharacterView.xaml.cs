@@ -20,11 +20,9 @@ namespace RPGDatabaseManager.View
     /// </summary>
     public partial class CharacterView : UserControl
     {
-
         public CharacterView()
         {
             InitializeComponent();
         }
-
     }
 }
