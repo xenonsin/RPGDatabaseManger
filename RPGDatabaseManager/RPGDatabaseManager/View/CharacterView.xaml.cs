@@ -18,7 +18,7 @@ namespace RPGDatabaseManager.View
     /// <summary>
     /// Interaction logic for CharacterView.xaml
     /// </summary>
-    public partial class CharacterView : Page
+    public partial class CharacterView : UserControl
     {
 
         public CharacterView()
@@ -26,14 +26,6 @@ namespace RPGDatabaseManager.View
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void textBox4_Copy1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+    
     }
 }

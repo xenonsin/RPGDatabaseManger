@@ -13,21 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RPGDatabaseManager.ViewModel;
+using MahApps.Metro.Controls;
 
 namespace RPGDatabaseManager.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindowView : Window
+    public partial class MainWindowView : MetroWindow
     {
-        public MainWindowViewModel ViewModel { get; set; }
 
         public MainWindowView()
         {
             InitializeComponent();
-            ViewModel = new MainWindowViewModel();
-            this.DataContext = ViewModel;
+          
         }
 
      

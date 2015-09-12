@@ -18,7 +18,7 @@ namespace RPGDatabaseManager.View
     /// <summary>
     /// Interaction logic for ItemView.xaml
     /// </summary>
-    public partial class ItemsView : Page
+    public partial class ItemsView : UserControl
     {
         public ItemsView()
         {

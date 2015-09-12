@@ -18,7 +18,7 @@ namespace RPGDatabaseManager.View
     /// <summary>
     /// Interaction logic for DialogueView.xaml
     /// </summary>
-    public partial class DialogueView : Page
+    public partial class DialogueView : UserControl
     {
         public DialogueView()
         {
