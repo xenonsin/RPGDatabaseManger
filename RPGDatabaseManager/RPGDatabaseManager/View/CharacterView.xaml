@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:RPGDatabaseManager"
-      xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+      xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+      
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200">
 
@@ -20,6 +20,17 @@
             <TextBlock>Keo</TextBlock>
             <TextBlock>Ron Ron</TextBlock>
         </ListBox>
+
+        <!--<dragablz:DragablzItemsControl Grid.Column="0">
+            <dragablz:DragablzItemsControl.ItemsOrganiser>
+                <dragablz:VerticalOrganiser />
+            </dragablz:DragablzItemsControl.ItemsOrganiser>
+            <TextBlock>Kiko</TextBlock>
+            <TextBlock>Josh</TextBlock>
+            <TextBlock>Keo</TextBlock>
+            <TextBlock>Ron Ron</TextBlock>
+        </dragablz:DragablzItemsControl>-->
+        
     </Grid>
 
 
