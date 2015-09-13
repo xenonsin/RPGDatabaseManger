@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using RPGDatabaseManager.ViewModel;
-using MahApps.Metro.Controls;
 
 namespace RPGDatabaseManager.View
 {

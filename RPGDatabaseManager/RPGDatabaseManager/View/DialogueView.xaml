@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RPGDatabaseManager.View"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1200"
-      Title="DialogueView" ShowsNavigationUI="false">
+      d:DesignHeight="800" d:DesignWidth="1200">
+
     <Grid>
         
     </Grid>
