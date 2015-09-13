@@ -80,7 +80,19 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <!--Properties-->
-            <GroupBox Grid.Row="0" Header="Properties">
+            <GroupBox Grid.Row="0">
+                <GroupBox.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="PROPERTIES" Foreground="White"/>
+                        <Button Content="Add" FontSize="9"
+                    HorizontalAlignment="Right" Grid.Column="1"
+                    Height="18" Width="54" Margin="0,-3,0,0"/>
+                    </Grid>
+                </GroupBox.Header>
                 <ScrollViewer>                    
                     <Grid>
                     <Grid.RowDefinitions>
@@ -89,11 +101,11 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBox Grid.Row="0" Grid.Column="0" wpf:TextFieldAssist.Hint="Character Name"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Row="0" Grid.Column="0" wpf:TextFieldAssist.Hint="Character Name"/>
                     <ComboBox Grid.Row="1" Grid.Column="0"  wpf:TextFieldAssist.Hint="Class">
                         <ComboBoxItem>Wizard</ComboBoxItem>
                         <ComboBoxItem>Swordsman</ComboBoxItem>
@@ -122,7 +134,19 @@
                 </ScrollViewer>
             </GroupBox>
             <!--Starting Attributes-->
-            <GroupBox Grid.Row="1" Header="Starting Attributes">
+            <GroupBox Grid.Row="1">
+                <GroupBox.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="STARTING ATTRIBUTES" Foreground="White"/>
+                        <Button Content="Add" FontSize="9"
+                    HorizontalAlignment="Right" Grid.Column="1"
+                    Height="18" Width="54" Margin="0,-3,0,0"/>
+                    </Grid>
+                </GroupBox.Header>
                 <ScrollViewer>                    
                 <StackPanel>
                     <!--Attribute 1-->
@@ -208,7 +232,19 @@
 
             </GroupBox>
             <!--Physical and Magical Stats-->
-            <GroupBox Grid.Row="2" Header="Physical and Magical Stats">
+            <GroupBox Grid.Row="2">
+                <GroupBox.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="STATS" Foreground="White"/>
+                        <Button Content="Add" FontSize="9"
+                    HorizontalAlignment="Right" Grid.Column="1"
+                    Height="18" Width="54" Margin="0,-3,0,0"/>
+                    </Grid>
+                </GroupBox.Header>
                 <ScrollViewer>                    
                     <Grid>
                     <Grid.ColumnDefinitions>
@@ -278,7 +314,19 @@ Cras tellus justo, consequat sit amet quam eu, dapibus eleifend tellus. Suspendi
             </GroupBox>
             <!--Visuals-->
             
-            <GroupBox Header="Visuals" Grid.Row="1">
+            <GroupBox Grid.Row="1">
+                <GroupBox.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Portraits" Foreground="White"/>
+                        <Button Content="Add" FontSize="9"
+                    HorizontalAlignment="Right" Grid.Column="1"
+                    Height="18" Width="54" Margin="0,-3,0,0"/>
+                    </Grid>
+                </GroupBox.Header>
                 <ScrollViewer>
                     <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto">
                         <ListBox.ItemsPanel>

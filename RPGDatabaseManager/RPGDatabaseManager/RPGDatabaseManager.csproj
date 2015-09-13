@@ -97,7 +97,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\CharacterAttribute.cs" />
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\CharacterPortraits.cs" />
+    <Compile Include="Models\CharacterProperty.cs" />
+    <Compile Include="Models\CharacterStats.cs" />
     <Compile Include="Models\Dialogue.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Properties\Annotations.cs" />

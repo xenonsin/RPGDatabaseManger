@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPGDatabaseManager
+namespace RPGDatabaseManager.Models
 {
     class Character
     {
+
+        public string Name { get; set; }
+
+        public List<CharacterAttribute> Attributes { get; } = new List<CharacterAttribute>();
+        public List<CharacterProperty> Properties { get;} = new List<CharacterProperty>();
+        public List<CharacterStats> Stats { get;}  = new List<CharacterStats>();
+        public List<CharacterPortraits> Portraits { get;} = new List<CharacterPortraits>();
+        public string Description { get; set; }
+
     }
 }

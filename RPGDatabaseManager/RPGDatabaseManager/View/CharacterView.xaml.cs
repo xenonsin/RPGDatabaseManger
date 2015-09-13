@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using RPGDatabaseManager.ViewModel;
 
 namespace RPGDatabaseManager.View
 {
@@ -23,6 +24,7 @@ namespace RPGDatabaseManager.View
         public CharacterView()
         {
             InitializeComponent();
+            DataContext = new CharacterViewModel();
         }
     }
 }
