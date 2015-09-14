@@ -340,8 +340,8 @@ Cras tellus justo, consequat sit amet quam eu, dapibus eleifend tellus. Suspendi
                     Height="18" Width="54" Margin="0,-3,0,0"/>
                     </Grid>
                 </GroupBox.Header>
-                <ScrollViewer>
-                    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <ListBox >
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <UniformGrid Rows="2" Columns="2"/>
