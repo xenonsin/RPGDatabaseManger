@@ -97,6 +97,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Behaviors\DropDownButtonBehavior.cs" />
     <Compile Include="Models\CharacterAttribute.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterPortraits.cs" />

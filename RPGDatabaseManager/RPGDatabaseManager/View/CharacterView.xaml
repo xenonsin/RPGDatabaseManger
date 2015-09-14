@@ -3,7 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:RPGDatabaseManager"
+      xmlns:b="clr-namespace:RPGDatabaseManager.Behaviors"
+      xmlns:i ="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"       
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200">
@@ -87,10 +88,27 @@
                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="PROPERTIES" Foreground="White"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="PROPERTIES" Foreground="White"/>
                         <Button Content="Add" FontSize="9"
                     HorizontalAlignment="Right" Grid.Column="1"
-                    Height="18" Width="54" Margin="0,-3,0,0"/>
+                    Height="18" Width="54" Margin="0,-3,0,0"
+                                ContextMenuService.IsEnabled="False" >
+                            <i:Interaction.Behaviors>
+                                <b:DropDownButtonBehavior/>
+                            </i:Interaction.Behaviors>
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="String"/>
+                                    <MenuItem Header="Int"/>
+                                    <MenuItem Header="Float"/>
+                                    <MenuItem Header="Bool"/>
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+
                     </Grid>
                 </GroupBox.Header>
                 <ScrollViewer>                    
@@ -321,7 +339,7 @@ Cras tellus justo, consequat sit amet quam eu, dapibus eleifend tellus. Suspendi
                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="Portraits" Foreground="White"/>
+                        <TextBlock Grid.Column="0" Text="PORTRAITS" Foreground="White"/>
                         <Button Content="Add" FontSize="9"
                     HorizontalAlignment="Right" Grid.Column="1"
                     Height="18" Width="54" Margin="0,-3,0,0"/>
