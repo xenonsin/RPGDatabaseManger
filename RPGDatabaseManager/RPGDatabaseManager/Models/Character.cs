@@ -17,5 +17,11 @@ namespace RPGDatabaseManager.Models
         public List<CharacterPortraits> Portraits { get;} = new List<CharacterPortraits>();
         public string Description { get; set; }
 
+        public Character(string name)
+        {
+            Name = name;
+            Description = "Sample Text";
+        }
+
     }
 }

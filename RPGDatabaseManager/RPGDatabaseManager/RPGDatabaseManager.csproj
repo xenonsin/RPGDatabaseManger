@@ -98,6 +98,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Behaviors\DropDownButtonBehavior.cs" />
+    <Compile Include="Commands\Command.cs" />
     <Compile Include="Models\CharacterAttribute.cs" />
     <Compile Include="Models\Character.cs" />
     <Compile Include="Models\CharacterPortraits.cs" />
@@ -151,9 +152,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Assets\a.jpg" />
     <Resource Include="Assets\b.jpg" />

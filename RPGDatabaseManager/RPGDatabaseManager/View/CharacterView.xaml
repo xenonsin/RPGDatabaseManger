@@ -53,22 +53,17 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <!--Character Name list-->
-            <ListBox Grid.Row="0">
-                <ListBoxItem>
-                    Keo
-                </ListBoxItem>
-                <ListBoxItem>
-                    Josh
-                </ListBoxItem>
-                <ListBoxItem>
-                    Keno
-                </ListBoxItem>
-                <ListBoxItem>
-                    Ron ron
-                </ListBoxItem>
+            <ListBox ItemsSource="{Binding Characters}" Grid.Row="0" SelectedIndex="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
             </ListBox>
             <!--Add Save and Delete Buttons-->
-            <Button Content="Add" Grid.Row="1"/>
+            <Button Content="Add" Grid.Row="1" Command="{Binding AddCharacterCommand}"/>
             <Button Content="Save" Grid.Row="2"/>
             <Button Content="Delete" Grid.Row="3" Background="Red" />
         </Grid>
@@ -76,7 +71,7 @@
         <Grid Grid.Column="1">
             <!--Three rows inside the second main colummn-->
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
                 <RowDefinition Height="4*"/>
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
@@ -111,8 +106,8 @@
 
                     </Grid>
                 </GroupBox.Header>
-                <ScrollViewer>                    
-                    <Grid>
+                <ScrollViewer>
+                    <!--<Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -123,32 +118,32 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBox Grid.Row="0" Grid.Column="0" wpf:TextFieldAssist.Hint="Character Name"/>
-                    <ComboBox Grid.Row="1" Grid.Column="0"  wpf:TextFieldAssist.Hint="Class">
+                        <TextBox Grid.Row="0" Grid.Column="0" wpf:TextFieldAssist.Hint="Character Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <ComboBox Grid.Row="1" Grid.Column="0"  wpf:TextFieldAssist.Hint="Class" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                         <ComboBoxItem>Wizard</ComboBoxItem>
                         <ComboBoxItem>Swordsman</ComboBoxItem>
                         <ComboBoxItem>Archer</ComboBoxItem>
                         <ComboBoxItem>Brawler</ComboBoxItem>
                     </ComboBox>
-                    <ComboBox Grid.Row="2" Grid.Column="0"  wpf:TextFieldAssist.Hint="Race">
+                        <ComboBox Grid.Row="2" Grid.Column="0"  wpf:TextFieldAssist.Hint="Race" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                         <ComboBoxItem>Orc</ComboBoxItem>
                         <ComboBoxItem>Human</ComboBoxItem>
                         <ComboBoxItem>Elf</ComboBoxItem>
                         <ComboBoxItem>Troll</ComboBoxItem>
                     </ComboBox>
-                    <TextBox Grid.Row="3" Grid.Column="0" wpf:TextFieldAssist.Hint="Starting Level"/>
-                    <ComboBox Grid.Row="2" Grid.Column="1"  wpf:TextFieldAssist.Hint="Gender">
+                        <TextBox Grid.Row="3" Grid.Column="0" wpf:TextFieldAssist.Hint="Starting Level" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <ComboBox Grid.Row="2" Grid.Column="1"  wpf:TextFieldAssist.Hint="Gender" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                         <ComboBoxItem>Male</ComboBoxItem>
                         <ComboBoxItem>Female</ComboBoxItem>
                     </ComboBox>
-                    <ComboBox Grid.Row="1" Grid.Column="1"  wpf:TextFieldAssist.Hint="Size">
+                        <ComboBox Grid.Row="1" Grid.Column="1"  wpf:TextFieldAssist.Hint="Size" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
                         <ComboBoxItem>Small</ComboBoxItem>
                         <ComboBoxItem>Medium</ComboBoxItem>
                         <ComboBoxItem>Large</ComboBoxItem>
                     </ComboBox>
-                    <TextBox Grid.Row="0" Grid.Column="1" wpf:TextFieldAssist.Hint="Age"/>
-                    <TextBox Grid.Row="3" Grid.Column="1" wpf:TextFieldAssist.Hint="Weight"/>
-                </Grid>
+                        <TextBox Grid.Row="0" Grid.Column="1" wpf:TextFieldAssist.Hint="Age" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" wpf:TextFieldAssist.Hint="Weight" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                </Grid>-->
                 </ScrollViewer>
             </GroupBox>
             <!--Starting Attributes-->
