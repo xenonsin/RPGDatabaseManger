@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:b="clr-namespace:RPGDatabaseManager.Behaviors"
+      xmlns:c="clr-namespace:RPGDatabaseManager.Controls"
       xmlns:i ="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"       
       mc:Ignorable="d" 
@@ -53,7 +54,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <!--Character Name list-->
-            <ListBox ItemsSource="{Binding Characters}" Grid.Row="0" SelectedIndex="0">
+            <ListBox ItemsSource="{Binding Characters}" Grid.Row="0" SelectedIndex="0" SelectedItem="{Binding SelectedCharacter}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -107,6 +108,11 @@
                     </Grid>
                 </GroupBox.Header>
                 <ScrollViewer>
+                    <!--Debug Purposes-->
+                    <c:KTextBox wpf:TextFieldAssist.Hint="Name"                             
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             Text="{Binding SelectedCharacter.Name, UpdateSourceTrigger=PropertyChanged}"
+                             VerticalAlignment="Top"/>
                     <!--<Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>

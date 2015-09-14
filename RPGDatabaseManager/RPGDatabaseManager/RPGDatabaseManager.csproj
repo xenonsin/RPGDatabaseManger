@@ -107,6 +107,7 @@
     <Compile Include="Models\Dialogue.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Controls\KTextBox.cs" />
     <Compile Include="ViewModel\DialogueViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="View\CharacterView.xaml.cs">

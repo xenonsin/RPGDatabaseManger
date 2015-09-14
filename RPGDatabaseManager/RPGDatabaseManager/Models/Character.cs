@@ -10,6 +10,7 @@ namespace RPGDatabaseManager.Models
     {
 
         public string Name { get; set; }
+        public int ID { get; set; }
 
         public List<CharacterAttribute> Attributes { get; } = new List<CharacterAttribute>();
         public List<CharacterProperty> Properties { get;} = new List<CharacterProperty>();
@@ -21,6 +22,7 @@ namespace RPGDatabaseManager.Models
         {
             Name = name;
             Description = "Sample Text";
+            ID = -1;
         }
 
     }

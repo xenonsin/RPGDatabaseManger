@@ -41,6 +41,7 @@ namespace RPGDatabaseManager.ViewModel
 
         private void AddCharacter()
         {
+            //TODO:Make the list auto-select the newest addition.
             Characters.Add(new Character("Sample"));
         }
 
