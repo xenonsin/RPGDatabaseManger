@@ -153,9 +153,9 @@
                     <TextBlock Text="STRENGTH"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="50" Grid.Column="1"/>
@@ -166,9 +166,9 @@
                     <TextBlock Text="AGILITY"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="35" Grid.Column="1"/>
@@ -179,9 +179,9 @@
                     <TextBlock Text="INTELLIGENCE"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="70" Grid.Column="1"/>
@@ -192,9 +192,9 @@
                     <TextBlock Text="FORTITUDE"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="20" Grid.Column="1"/>                        
@@ -205,9 +205,9 @@
                     <TextBlock Text="REFLEX"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="80" Grid.Column="1"/>
@@ -218,9 +218,9 @@
                     <TextBlock Text="WISDOM"/>
                     <Grid Style="{StaticResource AttributeGridMarginStyle}">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Content="-" Grid.Column="0"/>
                         <ProgressBar Value="60" Grid.Column="1"/>
