@@ -7,6 +7,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+               
 
                 <!--Mah Apss-->
                     <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
@@ -74,6 +75,9 @@
 
                 <!-- Include the Dragablz Material Design style -->
                 <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/materialdesign.xaml"/>
+
+                <!--commonStyle per usercontrol-->
+                <ResourceDictionary Source="StyleResources/CommonStyle.xaml"/>
 
             </ResourceDictionary.MergedDictionaries>
 

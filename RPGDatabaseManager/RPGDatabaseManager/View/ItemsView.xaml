@@ -3,11 +3,128 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"    
       xmlns:local="clr-namespace:RPGDatabaseManager.View"
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300">
-
+       d:DesignHeight="800" d:DesignWidth="1200">
     <Grid>
-        
+        <!--Three Main Columns-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+        <!--First Main Column[Namelist and Buttons]-->
+        <Grid Grid.Column="0" Margin="0 5 0 0">
+            <!--Four rows inside the first main colummn-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8.5*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!--Item Name list-->
+            <ListBox Grid.Row="0">
+                <!--<ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>-->
+                <ListBoxItem>
+                    <TextBlock Text="Potion"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <TextBlock Text="Potion"/>
+                </ListBoxItem>
+            </ListBox>
+            <!--Add Save and Delete Buttons-->
+            <Button Content="Add" Grid.Row="1"/>
+            <Button Content="Save" Grid.Row="2"/>
+            <Button Content="Delete" Grid.Row="3" Background="Red" />
+        </Grid>
+        <!--Second Main Column-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--PROPERTIES-->
+            <GroupBox Height="Auto">
+                <GroupBox.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="13"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="PROPERTIES" Grid.Column="0" Grid.Row="0" Foreground="White"/>
+                        <Button Content="Add" HorizontalAlignment="Right" Grid.Column="1">
+                      
+                        </Button>
+                    </Grid>
+                </GroupBox.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Row="0" Grid.Column="0" wpf:TextFieldAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="2"/>
+                    <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Orientation="Vertical">
+                        <TextBlock Text="Icon: " HorizontalAlignment="Center"/>
+                        <Image Source="/RPGDatabaseManager;component/Assets/Dedge.png" Width="64" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <ComboBox Grid.Row="1" wpf:TextFieldAssist.Hint="Rarity" Style="{StaticResource MaterialDesignFloatingHintComboBox}"  Margin="2">
+                        <ComboBoxItem>Common</ComboBoxItem>
+                        <ComboBoxItem>Unique</ComboBoxItem>
+                        <ComboBoxItem>Rare</ComboBoxItem>
+                        <ComboBoxItem>Elite</ComboBoxItem>
+                    </ComboBox>
+                    
+                    <ComboBox Grid.Row="2" wpf:TextFieldAssist.Hint="Scope" Style="{StaticResource MaterialDesignFloatingHintComboBox}"  Margin="2">
+                        <ComboBoxItem>Self</ComboBoxItem>
+                        <ComboBoxItem>Nearby Friends</ComboBoxItem>
+                        <ComboBoxItem>Nearby Enemies</ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Grid.Row="3" Grid.Column="0" wpf:TextFieldAssist.Hint="Consumable" Style="{StaticResource MaterialDesignFloatingHintComboBox}"  Margin="2">
+                        <ComboBoxItem>Yes</ComboBoxItem>
+                        <ComboBoxItem>No</ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Grid.Row="4" Grid.Column="0" wpf:TextFieldAssist.Hint="Price" Style="{StaticResource MaterialDesignFloatingHintComboBox}"  Margin="2">
+                        <ComboBoxItem>$2</ComboBoxItem>
+                        <ComboBoxItem>$5</ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Grid.Row="5" Grid.Column="0" wpf:TextFieldAssist.Hint="Charges" Style="{StaticResource MaterialDesignFloatingHintComboBox}"  Margin="2">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Description" Margin="5 2 2 2"/>
+                    <RichTextBox Grid.Row="3" Grid.Column="1" Grid.RowSpan="3" Margin="5 2 2 2">
+                        <FlowDocument>
+                            <Paragraph>
+                                
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    
+                </Grid>
+            </GroupBox>
+        </Grid>
     </Grid>
 </UserControl>
