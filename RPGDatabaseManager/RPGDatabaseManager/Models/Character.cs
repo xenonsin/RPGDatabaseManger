@@ -1,23 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Resources;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using RPGDatabaseManager.Annotations;
 
 namespace RPGDatabaseManager.Models
 {
-    class Character
+    class Character : INotifyPropertyChanged
     {
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public string Name { get; set; }
-        public int ID { get; set; }
+        private int id;
+        public int ID
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string description;
+
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                description = value;
+                OnPropertyChanged();
+            }
+        }
 
         public List<CharacterAttribute> Attributes { get; private set; } = new List<CharacterAttribute>();
         public List<CharacterProperty> Properties { get; private set; } = new List<CharacterProperty>();
         public List<CharacterStats> Stats { get; private set; } = new List<CharacterStats>();
         public List<CharacterPortraits> Portraits { get; private set; } = new List<CharacterPortraits>();
-        public string Description { get; set; }
 
         public Character(string name)
         {
@@ -44,5 +76,12 @@ namespace RPGDatabaseManager.Models
             Portraits = new List<CharacterPortraits>();
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

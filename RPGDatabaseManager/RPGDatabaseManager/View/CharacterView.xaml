@@ -73,7 +73,7 @@
             <!--Add Save and Delete Buttons-->
             <Button Content="Add" Grid.Row="1" Command="{Binding AddCharacterCommand}"/>
             <Button Content="Save" Grid.Row="2"/>
-            <Button Content="Delete" Grid.Row="3" Background="Red"  Command="{Binding DeleteCharacterCommand}"/>
+            <Button Content="{Binding DeleteButtonText}" Grid.Row="3" Background="Red"  Command="{Binding DeleteCharacterCommand}"/>
         </Grid>
         <!--Second Main Column[Properties, Attributes and Stats]-->
         <Grid Grid.Column="1">
@@ -84,7 +84,7 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <!--Properties-->
-            <GroupBox Grid.Row="0">
+            <GroupBox Grid.Row="0" >
                 <GroupBox.Header>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -328,13 +328,10 @@
             </Grid.RowDefinitions>
             <!--Decription-->
             <GroupBox Header="Flavor Text Description/Backround Story" Grid.Row="0">
-                <RichTextBox FontSize="13">
-                    <FlowDocument>
-                        <Paragraph>
-                            <Run Text="{Binding SelectedCharacter.Description}"/>
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap" VerticalAlignment="Stretch"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         wpf:TextFieldAssist.Hint="Description"
+                         Text="{Binding SelectedCharacter.Description}" />
             </GroupBox>
             <!--Visuals-->
             

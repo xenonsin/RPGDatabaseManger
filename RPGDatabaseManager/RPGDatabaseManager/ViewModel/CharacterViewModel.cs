@@ -26,7 +26,20 @@ namespace RPGDatabaseManager.ViewModel
             {
                 selectedCharacter = value;
                 OnPropertyChanged();
+                ChangeDeleteButtonText();
             }
+        }
+
+        private string deleteButtonText;
+        public string DeleteButtonText
+        {
+            get { return deleteButtonText;}
+            set
+            {
+                deleteButtonText = value;
+                OnPropertyChanged();
+            }
+           
         }
 
         public ICommand AddCharacterCommand { get; }
@@ -37,7 +50,8 @@ namespace RPGDatabaseManager.ViewModel
             //Bind Commands
             AddCharacterCommand = new Command(x => AddCharacter());
             DeleteCharacterCommand = new Command(x => DeleteCharacter());
-            Characters.Add(new Character("Sample"));
+
+            //Characters.Add(new Character("Sample"));
             //Characters.Add(new Character("Sample 2"));
 
         }
@@ -50,10 +64,32 @@ namespace RPGDatabaseManager.ViewModel
 
         private void DeleteCharacter()
         {
-            //TODO: The problem of repeated ID's occur..
+            //If Selected character is in the middle of the list, clear contents.
+            //If Selected character is at the end of the list, delete instead.
             var index = SelectedCharacter.ID;
-            Characters.RemoveAt(index);
-            SelectedCharacter = Characters[index - 1];
+
+            if (index == Characters.Count - 1)
+            {
+                Characters.RemoveAt(index);
+
+                if (Characters.Count > 0)
+                {
+                    SelectedCharacter = Characters[index - 1];
+                }
+            }
+            else
+            {
+                SelectedCharacter.Reset();
+                OnPropertyChanged();
+            }
+
+            
+        }
+
+        private void ChangeDeleteButtonText()
+        {
+            DeleteButtonText = SelectedCharacter != null && SelectedCharacter.ID == Characters.Count - 1 ? "Delete" : "Clear";
+
         }
 
 
