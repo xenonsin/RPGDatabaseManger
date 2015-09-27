@@ -58,7 +58,14 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1}">
+                                        <Binding Path="ID"/>
+                                        <Binding Path="Name"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -66,7 +73,7 @@
             <!--Add Save and Delete Buttons-->
             <Button Content="Add" Grid.Row="1" Command="{Binding AddCharacterCommand}"/>
             <Button Content="Save" Grid.Row="2"/>
-            <Button Content="Delete" Grid.Row="3" Background="Red" />
+            <Button Content="Delete" Grid.Row="3" Background="Red"  Command="{Binding DeleteCharacterCommand}"/>
         </Grid>
         <!--Second Main Column[Properties, Attributes and Stats]-->
         <Grid Grid.Column="1">
@@ -321,15 +328,7 @@
             </Grid.RowDefinitions>
             <!--Decription-->
             <GroupBox Header="Flavor Text Description/Backround Story" Grid.Row="0">
-                <RichTextBox FontSize="13">
-                    <FlowDocument>
-                        <Paragraph>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada felis turpis, semper ornare tellus malesuada blandit. In hac habitasse platea dictumst. Nullam leo mi, venenatis mollis fringilla sit amet, imperdiet eu orci. Suspendisse sit amet finibus elit. Aliquam commodo diam a maximus elementum. Aenean at feugiat tellus. Donec nec euismod tellus, ut iaculis ipsum. Duis eleifend, ipsum nec varius tincidunt, dui dolor congue elit, ac lacinia augue quam ac justo.
-
-Cras tellus justo, consequat sit amet quam eu, dapibus eleifend tellus. Suspendisse ultrices, nulla in viverra facilisis, nulla arcu tincidunt massa, sit amet auctor risus mauris pellentesque lacus. Sed fringilla rhoncus nulla, vel viverra turpis posuere in. Integer eu mattis nulla. Suspendisse arcu tortor, euismod at justo in, mattis ornare lacus. Donec condimentum est vitae erat molestie scelerisque. Donec vestibulum tortor nunc, quis fermentum odio pellentesque sit amet. Nam vestibulum, nisi ut egestas vestibulum, arcu turpis cursus sapien, et mattis eros lorem a leo. Curabitur ac turpis turpis. Praesent ligula felis, mollis non nibh aliquet, condimentum mattis elit. Proin vestibulum auctor nulla vitae auctor. In sed dui mollis, interdum odio maximus, finibus mauris. Donec eget finibus mauris. Aliquam cursus arcu vel velit consequat, et dapibus ipsum dapibus.                            
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
+                <RichTextBox FontSize="13" b:RichTextBoxBindableBehavior.BoundDocument="{Binding SelectedCharacter.Description}"/>
             </GroupBox>
             <!--Visuals-->
             

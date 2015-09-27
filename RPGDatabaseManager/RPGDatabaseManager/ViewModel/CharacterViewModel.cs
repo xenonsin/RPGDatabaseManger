@@ -30,19 +30,30 @@ namespace RPGDatabaseManager.ViewModel
         }
 
         public ICommand AddCharacterCommand { get; }
+        public ICommand DeleteCharacterCommand { get; }
 
         public CharacterViewModel()
         {
+            //Bind Commands
             AddCharacterCommand = new Command(x => AddCharacter());
-            //Characters.Add(new Character("Sample"));
+            DeleteCharacterCommand = new Command(x => DeleteCharacter());
+            Characters.Add(new Character("Sample"));
             //Characters.Add(new Character("Sample 2"));
 
         }
 
         private void AddCharacter()
         {
-            //TODO:Make the list auto-select the newest addition.
-            Characters.Add(new Character("Sample"));
+            Characters.Add(new Character("Sample", Characters.Count));
+            SelectedCharacter = Characters[Characters.Count - 1];
+        }
+
+        private void DeleteCharacter()
+        {
+            //TODO: The problem of repeated ID's occur..
+            var index = SelectedCharacter.ID;
+            Characters.RemoveAt(index);
+            SelectedCharacter = Characters[index - 1];
         }
 
 
