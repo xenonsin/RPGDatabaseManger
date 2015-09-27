@@ -328,7 +328,13 @@
             </Grid.RowDefinitions>
             <!--Decription-->
             <GroupBox Header="Flavor Text Description/Backround Story" Grid.Row="0">
-                <RichTextBox FontSize="13" b:RichTextBoxBindableBehavior.BoundDocument="{Binding SelectedCharacter.Description}"/>
+                <RichTextBox FontSize="13">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="{Binding SelectedCharacter.Description}"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
             </GroupBox>
             <!--Visuals-->
             

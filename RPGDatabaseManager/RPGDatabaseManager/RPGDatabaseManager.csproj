@@ -98,7 +98,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Behaviors\DropDownButtonBehavior.cs" />
-    <Compile Include="Behaviors\RichTextBoxBindableBehavior.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Models\CharacterAttribute.cs" />
     <Compile Include="Models\Character.cs" />
